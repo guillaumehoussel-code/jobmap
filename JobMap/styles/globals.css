@@ -1,0 +1,30 @@
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800;
+}
+
+/* Mobile bottom sheet adjustments */
+@media (max-width: 768px) {
+  .leaflet-container {
+    height: 72vh !important;
+  }
+}
+
+/* Highlight marker styling (desktop subtle bounce) */
+.jobmap-highlight-marker {
+  animation: jobmapPulse 1.6s infinite;
+}
+@keyframes jobmapPulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+```
